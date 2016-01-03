@@ -9,4 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('birthdayApp', []);
+  .module('birthdayApp', [
+    'angularMoment',
+    'ngMaterial'
+  ]);
