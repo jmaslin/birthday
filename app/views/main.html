@@ -1,23 +1,23 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<md-content class="content-area" layout-fill flex layout="column" layout-padding>
+  
+  <section layout="row" layout-align="center center">
+    <md-datepicker ng-model="date" ng-change="changeDate(date)" md-placeholder="Enter date"></md-datepicker>
+  </section>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+  <div layout="row" layout-align="center center">
+    <div flex-xs="100" flex-sm="90" flex-gt-sm="60"
+         ng-show="person" ng-hide="!person" class="fx-fade-normal fx-dur-600 fx-ease-none">
+      <person-card person="person"></person-card>
+    </div>
+  </div>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+  <span flex></span>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+  <div layout="row" layout-align="end end">
+    <md-button class="md-fab md-accent md-mini refresh"
+               ng-click="getPerson()">
+      <md-icon md-font-icon="material-icons">refresh</md-icon>
+    </md-button>
+  </div>
+  
+</md-content>
