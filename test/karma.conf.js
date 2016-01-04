@@ -29,11 +29,21 @@ module.exports = function(config) {
       'bower_components/angular-aria/angular-aria.js',
       'bower_components/angular-messages/angular-messages.js',
       'bower_components/angular-material/angular-material.js',
+      'bower_components/gsap/src/uncompressed/TweenMax.js',
+      'bower_components/ng-fx/dist/ngFx.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
+      
       "app/scripts/**/*.js",
       "test/mock/**/*.js",
-      "test/spec/**/*.js"
+      "test/spec/**/*.js",
+
+      // fixtures
+      { pattern: 'app/data/**/*.json',
+        watched: true,
+        servedd: true,
+        included: false }
+
     ],
 
     // list of files / patterns to exclude

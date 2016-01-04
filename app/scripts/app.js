@@ -11,5 +11,7 @@
 angular
   .module('birthdayApp', [
     'angularMoment',
-    'ngMaterial'
+    'ngMaterial',
+    'ngAnimate',
+    'ngFx'
   ]);
