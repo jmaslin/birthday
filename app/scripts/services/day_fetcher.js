@@ -8,8 +8,9 @@
  * Factory in the birthdayApp.
  */
 angular.module('birthdayApp')
-  .factory('dayFetcher', function ($http) {
+  .factory('dayFetcher', function ($http, $location) {
     // Service logic
+    var basePath = $location.absUrl();
 
     var buildFileName = function buildFileName (dayNumber) {
       // Subtract one from dayNumber since the file names start at 0.
@@ -19,8 +20,9 @@ angular.module('birthdayApp')
 
     var loadBirthdayData = function loadBirthdayData (dayNumber) {
       var fileName = buildFileName(dayNumber);
+      var location = basePath + 'data/birthdays/';
 
-      return $http.get('/data/birthdays/'+fileName).then(function (response) {
+      return $http.get(location+fileName).then(function (response) {
         return response.data.people;
       });
     };
