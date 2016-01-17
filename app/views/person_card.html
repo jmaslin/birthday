@@ -4,14 +4,9 @@
       <span class="md-headline">{{person.name}}</span>
       <span class="md-subhead">{{person.monthDay + '/' + person.year | amDateFormat: 'MMMM Do, YYYY'}}</span>
     </md-card-title-text>
-    <md-card-title-media flex-order="1" flex-order-gt-xs="2">
-      <div class="md-media-lg card-media" style="border: 1px solid gray;">
-      </div>
-    </md-card-title-media>
   </md-card-title>
   <md-card-content>
-    <!-- <span class="md-title">{{person.age}} old.</span> -->
-    <!-- <md-divider></md-divider> -->
+    <img ng-show="person.imageUrl" class="md-media-xl card-media" ng-src="{{person.imageUrl}}">
     <p>{{person.aboutText}}</p>
   </md-card-content>
   <md-card-actions layout="row" layout-align="end center">
