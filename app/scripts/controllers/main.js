@@ -24,7 +24,6 @@ angular.module('birthdayApp')
       $timeout(function () {
         $log.debug("Get new person.");
         $scope.person = birthdayFetcher.getRandomPerson();
-        $log.info($scope.person);
       }, 50);
     };
 
