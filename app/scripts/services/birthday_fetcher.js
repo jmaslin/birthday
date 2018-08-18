@@ -14,7 +14,13 @@ angular.module('birthdayApp')
     var self = {}, index = 0;
 
     var formatDateToDay = function formatDateToDay (date) {
-      return moment(date).format('DDD');
+      var DAY_NUMBER_OF_FEB_28 = 59;
+      var isLeapYear = moment(date).isLeapYear();
+      var dayNum = Number(moment(date).format('DDD')); //moment returns 1 indexed string
+      if (!isLeapYear && dayNum > DAY_NUMBER_OF_FEB_28) {
+          dayNum ++;
+      }
+      return String(dayNum)
     };
 
     var getPeopleList = function getPeopleList () {
