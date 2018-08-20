@@ -1,0 +1,20 @@
+// // bower:scss
+ // endbower
+
+.content-area {
+  background: url('../images/landscape.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+person-card {
+  md-card {
+    // background: rgba(252, 252, 252, 0.85);
+  }
+
+  md-card-content p {
+    line-height: 200%;
+  }
+}

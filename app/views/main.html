@@ -1,0 +1,23 @@
+<md-content class="content-area" layout-fill flex layout="column" layout-padding>
+  
+  <section layout="row" layout-align="center center">
+    <md-datepicker ng-model="date" ng-change="changeDate(date)" md-placeholder="Enter date"></md-datepicker>
+  </section>
+
+  <div layout="row" layout-align="center center">
+    <div flex-xs="100" flex-sm="90" flex-gt-sm="60"
+         ng-show="person" ng-hide="!person" class="fx-fade-normal fx-dur-600 fx-ease-none">
+      <person-card person="person"></person-card>
+    </div>
+  </div>
+
+  <span flex></span>
+
+  <div layout="row" layout-align="end end">
+    <md-button class="md-fab md-accent md-mini refresh"
+               ng-click="getPerson()">
+      <md-icon md-font-icon="material-icons">refresh</md-icon>
+    </md-button>
+  </div>
+  
+</md-content>
